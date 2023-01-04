@@ -1,0 +1,125 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color:#E5E5E5;
+}
+.app{
+    width:414px;
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    background-color: #CF2B2B;
+    height: 92px;
+    width:100%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    position:fixed;
+    top:0;
+    left:0;
+}
+h1{
+    font-family: 'Righteous', cursive;
+    font-size: 44px;
+    font-weight: 400;
+    line-height: 55px;
+    color: white;
+    margin-left:21px;
+    margin-top:5px;
+}
+h3{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    color: white;
+    margin-left:21px;
+    margin-top:-5px;
+}
+.container{
+    margin-left:19px;
+    margin-top:123px;
+    margin-bottom:108px;
+}
+h2{
+    font-family: 'Righteous', cursive;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 32px;
+    margin-top:27px;
+    margin-bottom:17px;
+}
+.opcoes{
+    display:flex;
+    overflow-x:scroll;
+    margin-top:-8px;
+}
+.opcao{
+    width:172px;
+    height:216px;
+    background-color: white;
+    margin-right:16px;
+    padding:15px;
+    border-radius:9px;
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+    
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+.opcao img{
+    width:144px;
+    height: 87px;
+}
+.produto{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #333333;
+}
+.opcao p:nth-child(3){
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 18px;
+    color:#A6A6A6;
+}
+.opcao p:nth-child(4){
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+}
+footer{
+    width:100%;
+    height: 92px;
+    background-color: white;
+    padding:15px 25px;
+    margin-top:80px;
+    position:fixed;
+    bottom: 0;
+    right:0;
+
+}
+footer div{
+    background-color: #CBCBCB;
+    border-radius: 50px;
+    width:364px;
+    height:61px;
+
+    display:flex;
+    align-items: center;
+    text-align: center;
+    
+    
+}
+footer div p{
+    color:white;
+    width:200px;
+    margin: auto;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23.44px;
+    letter-spacing: 0.018em;
+}
+
