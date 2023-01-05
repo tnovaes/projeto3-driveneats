@@ -1,5 +1,7 @@
 *{
     box-sizing: border-box;
+    margin:0px;
+    padding:0px;
 }
 body{
     background-color:#E5E5E5;
@@ -18,6 +20,7 @@ header{
     position:fixed;
     top:0;
     left:0;
+    z-index: 1;
 }
 h1{
     font-family: 'Righteous', cursive;
@@ -58,19 +61,28 @@ h2{
     width:172px;
     height:216px;
     background-color: white;
-    margin-right:16px;
-    padding:15px;
+    margin-right:14px;
+    padding-right:14px;
+    padding-left:10px;
+    padding-top:8px;
+    padding-bottom:4px;
+    border: 5px solid transparent;
     border-radius:9px;
     box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
     
+    
     display:flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
+
+    position:relative;
+
     
 }
 .opcao img{
     width:144px;
     height: 87px;
+    border-radius: 5px;
 }
 .produto{
     font-weight: 700;
@@ -90,15 +102,24 @@ h2{
     line-height: 19px;
     color: #000000;
 }
+ion-icon{
+    color: #32B72F;
+    position:absolute;
+    font-size: 20px;
+    right: 7px;
+    bottom:7px;
+}
 footer{
     width:100%;
     height: 92px;
     background-color: white;
     padding:15px 25px;
     margin-top:80px;
+    
     position:fixed;
     bottom: 0;
     right:0;
+    z-index:1;
 
 }
 footer div{
@@ -121,5 +142,17 @@ footer div p{
     font-size: 20px;
     line-height: 23.44px;
     letter-spacing: 0.018em;
+}
+
+.selecionado{
+    border: 5px solid #32B72F;
+}
+
+.escondido{
+    display:none;
+}
+
+.finalizado{
+    background-color: #32B72F;
 }
 
