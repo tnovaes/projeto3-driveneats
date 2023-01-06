@@ -1,6 +1,10 @@
 let contadorPrato = 0;
 let contadorBebida = 0;
 let contadorSobremesa = 0;
+let pratoPedido, bebidaPedida, sobremesaPedida;
+let valorPrato = 0;
+let valorBebida = 0;
+let valorSobremesa = 0;
 
 function selecionarPrato(pratoSelecionado){
     const tirarPratoSelecionado = document.querySelector('.pratos .selecionado');
@@ -9,6 +13,12 @@ function selecionarPrato(pratoSelecionado){
     }
     pratoSelecionado.classList.toggle("selecionado");
     contadorPrato = 1;
+
+    pratoPedido = document.querySelector('.pratos .selecionado .produto').textContent;
+    
+    precoPrato = document.querySelector('.pratos .selecionado .preco').textContent.split(' ');
+    valorPrato = Number(precoPrato[1].replace(',','.'));
+
     finalizarPedido();
 }
 
@@ -19,6 +29,12 @@ function selecionarBebida(bebidaSelecionada){
     }
     bebidaSelecionada.classList.toggle("selecionado");
     contadorBebida = 1;
+
+    bebidaPedida = document.querySelector('.bebidas .selecionado .produto').textContent;
+
+    precoBebidas = document.querySelector('.bebidas .selecionado .preco').textContent.split(' ');
+    valorBebida = Number(precoBebidas[1].replace(',','.'));
+
     finalizarPedido();
 }
 
@@ -29,6 +45,13 @@ function selecionarSobremesa(sobremesaSelecionada){
     }
     sobremesaSelecionada.classList.toggle("selecionado");
     contadorSobremesa = 1;
+
+    sobremesaPedida = document.querySelector('.sobremesas .selecionado .produto').textContent;
+
+    precoSobremesa = document.querySelector('.sobremesas .selecionado .preco').textContent.split(' ');
+    valorSobremesa = Number(precoSobremesa[1].replace(',','.'));
+    
+
     finalizarPedido();
 }
 
@@ -38,6 +61,12 @@ function finalizarPedido(){
         pedidoFinalizado.classList.add("finalizado");
         pedidoFinalizado.innerHTML = "Fechar pedido"
         pedidoFinalizado.disabled = false;
-        
+        pedidoFinalizado.addEventListener("click", pedidoWhatsapp);
     }
+}
+
+function pedidoWhatsapp(){
+    const valorTotal = valorPrato + valorBebida + valorSobremesa;
+    const pedidoCompleto = `Olá, gostaria de fazer o pedido:\n- Prato: ${pratoPedido}\n- Bebida: ${bebidaPedida}\n- Sobremesa: ${sobremesaPedida}\nTotal: R$ ${valorTotal.toFixed(2)}`;
+    window.open(`https://wa.me/5535999999999?text=${encodeURIComponent(pedidoCompleto)}`);
 }
