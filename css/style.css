@@ -108,6 +108,10 @@ ion-icon{
     font-size: 20px;
     right: 7px;
     bottom:7px;
+    display: none
+}
+.selecionado ion-icon{
+    display:initial;
 }
 footer{
     width:100%;
@@ -122,37 +126,35 @@ footer{
     z-index:1;
 
 }
-footer div{
+.botaoFinal{
     background-color: #CBCBCB;
     border-radius: 50px;
     width:364px;
     height:61px;
+    padding:10px 80px;
 
     display:flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-align: center;
-    
-    
-}
-footer div p{
+
     color:white;
-    width:200px;
-    margin: auto;
+    
     font-weight: 400;
     font-size: 20px;
     line-height: 23.44px;
     letter-spacing: 0.018em;
+    
+    
 }
 
 .selecionado{
     border: 5px solid #32B72F;
 }
 
-.escondido{
-    display:none;
-}
-
 .finalizado{
     background-color: #32B72F;
+    font-weight: 700;
+    
 }
-
