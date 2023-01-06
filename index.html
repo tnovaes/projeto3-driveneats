@@ -26,21 +26,21 @@
             <div class="secao">
                 <h2>Primeiro, seu prato</h2>
                 <div class="opcoes pratos">
-                    <div class="opcao" onclick="selecionarPrato(this)">
+                    <div data-test="dish" class="opcao" onclick="selecionarPrato(this)">
                         <img src="./imagens/pao-de-queijo.jpg">
                         <p class="produto">Pão de Queijo</p>
                         <p>Porção com 8</p>
                         <p>R$10,00</p>
                         <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
                     </div>
-                    <div class="opcao" onclick="selecionarPrato(this)">
+                    <div data-test="dish" class="opcao" onclick="selecionarPrato(this)">
                         <img src="./imagens/kibe.jpg">
                         <p class="produto">Kibe</p>
                         <p>Porção com 4</p>
                         <p>R$8,90</p>
                         <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
                     </div>
-                    <div class="opcao" onclick="selecionarPrato(this)">
+                    <div data-test="dish" class="opcao" onclick="selecionarPrato(this)">
                         <img src="./imagens/coxinha.jpg">
                         <p class="produto">Coxinha</p>
                         <p>Porção com 12</p>
@@ -52,21 +52,21 @@
             <div class="secao">
                 <h2>Agora, sua bebida</h2>
                 <div class="opcoes bebidas">
-                    <div class="opcao" onclick="selecionarBebida(this)">
+                    <div data-test="drink" class="opcao" onclick="selecionarBebida(this)">
                         <img src="./imagens/coca-cola.png">
                         <p class="produto">Coca-Cola</p>
                         <p>Lata 350ml</p>
                         <p>R$4,90</p>
                         <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
                     </div>
-                    <div class="opcao" onclick="selecionarBebida(this)">
+                    <div data-test="drink" class="opcao" onclick="selecionarBebida(this)">
                         <img src="./imagens/guarana.jpg">
                         <p class="produto">Guaraná Antarctica</p>
                         <p>Lata 350ml</p>
                         <p>R$3,80</p>
                         <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
                     </div>
-                    <div class="opcao" onclick="selecionarBebida(this)">
+                    <div data-test="drink" class="opcao" onclick="selecionarBebida(this)">
                         <img src="./imagens/mate.jpg">
                         <p class="produto">Mate da Casa</p>
                         <p>Copo 500ml</p>
@@ -78,21 +78,21 @@
             <div class="secao">
                 <h2>Por fim, sua sobremesa</h2>
                 <div class="opcoes sobremesas">
-                    <div class="opcao" onclick="selecionarSobremesa(this)">
+                    <div data-test="dessert" class="opcao" onclick="selecionarSobremesa(this)">
                         <img src="./imagens/pudim.png">
                         <p class="produto">Pudim</p>
                         <p>Apenas pudim</p>
                         <p>R$7,90</p>
                         <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
                     </div>
-                    <div class="opcao" onclick="selecionarSobremesa(this)">
+                    <div data-test="dessert" class="opcao" onclick="selecionarSobremesa(this)">
                         <img src="./imagens/brownie.jpg">
                         <p class="produto">Brownie</p>
                         <p>Receita caseira (Unidade)</p>
                         <p>R$6,00</p>
                         <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
                     </div>
-                    <div class="opcao" onclick="selecionarSobremesa(this)">
+                    <div data-test="dessert" class="opcao" onclick="selecionarSobremesa(this)">
                         <img src="./imagens/brigadeiro.jpg">
                         <p class="produto">Brigadeiro</p>
                         <p>Porção com 5</p>
@@ -103,9 +103,9 @@
             </div>
         </div>
         <footer>
-            <div class="botaoFinal">
+            <button data-test="order-btn" class="botaoFinal" disabled>
                 Selecione os 3 itens para fechar o pedido
-            </div>
+            </button>
         </footer>
     </div>
 

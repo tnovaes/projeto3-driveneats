@@ -37,5 +37,7 @@ function finalizarPedido(){
     if((contadorPrato + contadorBebida + contadorSobremesa)===3){
         pedidoFinalizado.classList.add("finalizado");
         pedidoFinalizado.innerHTML = "Fechar pedido"
+        pedidoFinalizado.disabled = false;
+        
     }
 }
