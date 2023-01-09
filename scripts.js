@@ -1,7 +1,7 @@
 let contadorPrato = 0;
 let contadorBebida = 0;
 let contadorSobremesa = 0;
-let contadorTotal = 3;
+const contadorTotal = 3;
 let pratoPedido, bebidaPedida, sobremesaPedida;
 let valorPrato = 0;
 let valorBebida = 0;
@@ -16,7 +16,7 @@ function selecionarPrato(pratoSelecionado){
     contadorPrato = 1;
 
     pratoPedido = document.querySelector('.pratos .selecionado .produto').textContent;
-    let precoPrato = document.querySelector('.pratos .selecionado .preco').textContent.split(' ');
+    const precoPrato = document.querySelector('.pratos .selecionado .preco').textContent.split(' ');
     valorPrato = Number(precoPrato[1].replace(',','.'));
 
     finalizarPedido();
@@ -31,7 +31,7 @@ function selecionarBebida(bebidaSelecionada){
     contadorBebida = 1;
 
     bebidaPedida = document.querySelector('.bebidas .selecionado .produto').textContent;
-    let precoBebidas = document.querySelector('.bebidas .selecionado .preco').textContent.split(' ');
+    const precoBebidas = document.querySelector('.bebidas .selecionado .preco').textContent.split(' ');
     valorBebida = Number(precoBebidas[1].replace(',','.'));
 
     finalizarPedido();
@@ -46,7 +46,7 @@ function selecionarSobremesa(sobremesaSelecionada){
     contadorSobremesa = 1;
 
     sobremesaPedida = document.querySelector('.sobremesas .selecionado .produto').textContent;
-    let precoSobremesa = document.querySelector('.sobremesas .selecionado .preco').textContent.split(' ');
+    const precoSobremesa = document.querySelector('.sobremesas .selecionado .preco').textContent.split(' ');
     valorSobremesa = Number(precoSobremesa[1].replace(',','.'));
     
 
